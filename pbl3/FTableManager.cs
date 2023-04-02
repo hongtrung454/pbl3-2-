@@ -16,9 +16,22 @@ namespace pbl3
         {
             InitializeComponent();
         }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null) activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel1.Controls.Add(childForm);
+            panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
         {
-            guna2Panel3.BackColor = Color.FromArgb(250, 28, 53, 46);
+            panel1.BackColor = Color.FromArgb(250, 28, 53, 46);
 
         }
 
@@ -27,6 +40,9 @@ namespace pbl3
             this.Dispose();
         }
 
-        
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormTK());
+        }
     }
 }
