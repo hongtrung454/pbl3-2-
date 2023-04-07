@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pbl3
 {
-    public partial class Formc : Form
+    public partial class FLogin : Form
     {
-        public Formc()
+        public FLogin()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace pbl3
             }
             else
             {
-                FTableManager f = new FTableManager();
+                FUser f = new FUser();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
@@ -84,5 +84,7 @@ namespace pbl3
                 tbPassword.PasswordChar = '\0';
             }
         }
+
+       
     }
 }

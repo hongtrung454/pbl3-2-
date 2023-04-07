@@ -324,7 +324,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe Script", 69.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.label3.Location = new System.Drawing.Point(-26, 15);
+            this.label3.Location = new System.Drawing.Point(-11, -3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(460, 154);
             this.label3.TabIndex = 15;

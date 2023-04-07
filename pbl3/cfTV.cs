@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pbl3
 {
-    public partial class fLoginChange : Form
+    public partial class cfTV : Form
     {
-        public fLoginChange()
+        public cfTV()
         {
             InitializeComponent();
         }

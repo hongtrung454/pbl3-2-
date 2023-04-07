@@ -1,6 +1,6 @@
 ﻿namespace pbl3
 {
-    partial class Formc
+    partial class FLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FLogin));
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -58,7 +58,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(944, 0);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(785, 0);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox3.TabIndex = 2;
@@ -70,7 +70,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(984, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(819, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox2.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1024, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(859, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox1.TabIndex = 0;
@@ -229,9 +229,9 @@
             this.guna2Panel1.Controls.Add(this.lbPassword);
             this.guna2Panel1.Controls.Add(this.tbPassword);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Location = new System.Drawing.Point(281, 55);
+            this.guna2Panel1.Location = new System.Drawing.Point(198, 12);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(550, 469);
+            this.guna2Panel1.Size = new System.Drawing.Size(550, 462);
             this.guna2Panel1.TabIndex = 21;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -281,7 +281,7 @@
             // 
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1068, 622);
+            this.ClientSize = new System.Drawing.Size(903, 522);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2ControlBox2);
