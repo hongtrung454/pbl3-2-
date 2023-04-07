@@ -17,74 +17,69 @@ namespace pbl3
             InitializeComponent();
         }
 
-        private void btLogin_Click(object sender, EventArgs e)
+       
+        bool Login(string userName, string pw)
         {
-            if (tbUsername.Text == "" || tbPassword.Text == "")
+            if (userName == "" && pw == "")
             {
-                MessageBox.Show("Vui lòng nhập thông tin tài khoản");
+                return false;
             }
-            else
+            else return true;
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string userName = txtUsername.Text;
+            string pw = txtPassword.Text;
+            if (Login(userName, pw))
             {
                 FUser f = new FUser();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
-        }
-
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        
-        private void Formc_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
-            if(MessageBox .Show("Do you really want to exit the program?", "Thông Báo",MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            else
             {
-                e.Cancel = true;
+                MessageBox.Show("Sai thông tin tài khoản");
             }
-
-        }
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-            //guna2Panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+            //
         }
 
-        private void btSignIn_Click(object sender, EventArgs e)
+        private void btnSignup_Click(object sender, EventArgs e)
         {
-
-            
             FRegister f = new FRegister();
             this.Hide();
             f.ShowDialog();
             this.Show();
-             
-                
+            //
         }
 
-        private void ShowPW2_Click(object sender, EventArgs e)
+        private void FLogin_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void NoShowPW3_Click(object sender, EventArgs e)
-        {
-            if (tbPassword.PasswordChar == '\0')
+            if (MessageBox.Show("Do you really want to exit the program?", "Thông Báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
-                ShowPW3.BringToFront();           
-                tbPassword.PasswordChar = '*';           
+                e.Cancel = true;
             }
         }
 
-        private void ShowPW3_Click(object sender, EventArgs e)
+        private void NoShowPW1_Click(object sender, EventArgs e)
         {
-            if (tbPassword.PasswordChar == '*')
+            if (txtPassword.PasswordChar == '\0')
             {
-                NoShowPW3.BringToFront();
-                tbPassword.PasswordChar = '\0';
+                ShowPW1.BringToFront();
+                txtPassword.PasswordChar = '*';
+            }
+
+        }
+        private void ShowPW1_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '*')
+            {
+                NoShowPW1.BringToFront();
+                txtPassword.PasswordChar = '\0';
             }
         }
-
-       
+        //
     }
 }

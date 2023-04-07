@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace pbl3
 {
-    public partial class cfPIC : Form
+    public partial class FormTK : Form
     {
-        public cfPIC()
+        public FormTK()
         {
             InitializeComponent();
         }
-
     }
 }
