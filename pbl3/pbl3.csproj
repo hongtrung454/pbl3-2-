@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -46,9 +52,12 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,96 +70,138 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CFManageTree.cs">
+    <Compile Include="Account.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Care.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CFManageTree.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CFManageTree.Designer.cs">
+    <Compile Include="GUI\CFManageTree.Designer.cs">
       <DependentUpon>CFManageTree.cs</DependentUpon>
     </Compile>
-    <Compile Include="CFManageUser.cs">
+    <Compile Include="GUI\CFManageUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CFManageUser.Designer.cs">
+    <Compile Include="GUI\CFManageUser.Designer.cs">
       <DependentUpon>CFManageUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="cfMyTree.cs">
+    <Compile Include="GUI\cfMyTree.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cfMyTree.Designer.cs">
+    <Compile Include="GUI\cfMyTree.Designer.cs">
       <DependentUpon>cfMyTree.cs</DependentUpon>
     </Compile>
-    <Compile Include="FAdmin.cs">
+    <Compile Include="GUI\FAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FAdmin.Designer.cs">
+    <Compile Include="GUI\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
+    <Compile Include="GUI\FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLogin.Designer.cs">
+    <Compile Include="GUI\FLogin.Designer.cs">
       <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FUser.cs">
+    <Compile Include="GUI\FUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FUser.Designer.cs">
+    <Compile Include="GUI\FUser.Designer.cs">
       <DependentUpon>FUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="cfTV.cs">
+    <Compile Include="GUI\cfTV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cfTV.Designer.cs">
+    <Compile Include="GUI\cfTV.Designer.cs">
       <DependentUpon>cfTV.cs</DependentUpon>
     </Compile>
-    <Compile Include="cfSearch.cs">
+    <Compile Include="GUI\cfSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cfSearch.Designer.cs">
+    <Compile Include="GUI\cfSearch.Designer.cs">
       <DependentUpon>cfSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="cfPIC.cs">
+    <Compile Include="GUI\cfPIC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cfPIC.Designer.cs">
+    <Compile Include="GUI\cfPIC.Designer.cs">
       <DependentUpon>cfPIC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FRegister.cs">
+    <Compile Include="GUI\FRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRegister.Designer.cs">
+    <Compile Include="GUI\FRegister.Designer.cs">
       <DependentUpon>FRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Planting.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CFManageTree.resx">
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tree.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeDemand.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeLocation.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TreeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TreeType.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserLocation.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\CFManageTree.resx">
       <DependentUpon>CFManageTree.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CFManageUser.resx">
+    <EmbeddedResource Include="GUI\CFManageUser.resx">
       <DependentUpon>CFManageUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cfMyTree.resx">
+    <EmbeddedResource Include="GUI\cfMyTree.resx">
       <DependentUpon>cfMyTree.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FAdmin.resx">
+    <EmbeddedResource Include="GUI\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
+    <EmbeddedResource Include="GUI\FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FUser.resx">
+    <EmbeddedResource Include="GUI\FUser.resx">
       <DependentUpon>FUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cfTV.resx">
+    <EmbeddedResource Include="GUI\cfTV.resx">
       <DependentUpon>cfTV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cfSearch.resx">
+    <EmbeddedResource Include="GUI\cfSearch.resx">
       <DependentUpon>cfSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cfPIC.resx">
+    <EmbeddedResource Include="GUI\cfPIC.resx">
       <DependentUpon>cfPIC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRegister.resx">
+    <EmbeddedResource Include="GUI\FRegister.resx">
       <DependentUpon>FRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -172,9 +223,35 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="TreeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TreeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="TreeModel.edmx.diagram">
+      <DependentUpon>TreeModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TreeModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TreeModel.Context.cs</LastGenOutput>
+      <DependentUpon>TreeModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="TreeModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TreeModel.edmx</DependentUpon>
+      <LastGenOutput>TreeModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
