@@ -39,11 +39,11 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPIC = new Guna.UI2.WinForms.Guna2Button();
             this.btnMyTree = new Guna.UI2.WinForms.Guna2Button();
             this.btnTuVan = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnPIC = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -63,7 +63,7 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1045, 24);
+            this.guna2Panel3.Size = new System.Drawing.Size(1187, 24);
             this.guna2Panel3.TabIndex = 2;
             // 
             // guna2ControlBox4
@@ -72,7 +72,7 @@
             this.guna2ControlBox4.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox4.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox4.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox4.Location = new System.Drawing.Point(1003, -6);
+            this.guna2ControlBox4.Location = new System.Drawing.Point(1145, -6);
             this.guna2ControlBox4.Name = "guna2ControlBox4";
             this.guna2ControlBox4.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox4.TabIndex = 6;
@@ -84,7 +84,7 @@
             this.guna2ControlBox5.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox5.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox5.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox5.Location = new System.Drawing.Point(963, -6);
+            this.guna2ControlBox5.Location = new System.Drawing.Point(1105, -6);
             this.guna2ControlBox5.Name = "guna2ControlBox5";
             this.guna2ControlBox5.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox5.TabIndex = 7;
@@ -97,7 +97,7 @@
             this.guna2ControlBox6.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox6.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox6.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox6.Location = new System.Drawing.Point(929, -6);
+            this.guna2ControlBox6.Location = new System.Drawing.Point(1071, -6);
             this.guna2ControlBox6.Name = "guna2ControlBox6";
             this.guna2ControlBox6.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox6.TabIndex = 8;
@@ -105,17 +105,17 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.Controls.Add(this.btnPIC);
             this.guna2Panel2.Controls.Add(this.guna2Panel1);
             this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel2.Controls.Add(this.pictureBox1);
-            this.guna2Panel2.Controls.Add(this.btnPIC);
             this.guna2Panel2.Controls.Add(this.btnMyTree);
             this.guna2Panel2.Controls.Add(this.btnTuVan);
             this.guna2Panel2.Controls.Add(this.btnSearch);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 24);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(210, 497);
+            this.guna2Panel2.Size = new System.Drawing.Size(210, 554);
             this.guna2Panel2.TabIndex = 11;
             // 
             // guna2Panel1
@@ -138,44 +138,22 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 431);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 488);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 54);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnPIC
-            // 
-            this.btnPIC.BackColor = System.Drawing.Color.Transparent;
-            this.btnPIC.BorderRadius = 22;
-            this.btnPIC.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnPIC.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnPIC.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPIC.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPIC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPIC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPIC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPIC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPIC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.btnPIC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPIC.ForeColor = System.Drawing.Color.White;
-            this.btnPIC.Location = new System.Drawing.Point(12, 344);
-            this.btnPIC.Name = "btnPIC";
-            this.btnPIC.Size = new System.Drawing.Size(219, 75);
-            this.btnPIC.TabIndex = 10;
-            this.btnPIC.Text = "      Personal        Information ";
-            this.btnPIC.UseTransparentBackground = true;
-            this.btnPIC.Click += new System.EventHandler(this.btnPIC_Click);
-            // 
             // btnMyTree
             // 
             this.btnMyTree.BackColor = System.Drawing.Color.Transparent;
             this.btnMyTree.BorderRadius = 22;
-            this.btnMyTree.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnMyTree.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnMyTree.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMyTree.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnMyTree.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -197,7 +175,7 @@
             // 
             this.btnTuVan.BackColor = System.Drawing.Color.Transparent;
             this.btnTuVan.BorderRadius = 22;
-            this.btnTuVan.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnTuVan.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnTuVan.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTuVan.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnTuVan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -219,8 +197,8 @@
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
             this.btnSearch.BorderRadius = 22;
-            this.btnSearch.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            this.btnSearch.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnSearch.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnSearch.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnSearch.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSearch.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -245,8 +223,30 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(210, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(835, 497);
+            this.panel1.Size = new System.Drawing.Size(977, 554);
             this.panel1.TabIndex = 12;
+            // 
+            // btnPIC
+            // 
+            this.btnPIC.BackColor = System.Drawing.Color.Transparent;
+            this.btnPIC.BorderRadius = 22;
+            this.btnPIC.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnPIC.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPIC.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPIC.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPIC.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPIC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPIC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPIC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
+            this.btnPIC.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnPIC.ForeColor = System.Drawing.Color.White;
+            this.btnPIC.Location = new System.Drawing.Point(12, 344);
+            this.btnPIC.Name = "btnPIC";
+            this.btnPIC.Size = new System.Drawing.Size(219, 74);
+            this.btnPIC.TabIndex = 10;
+            this.btnPIC.Text = "Personal Information";
+            this.btnPIC.UseTransparentBackground = true;
+            this.btnPIC.Click += new System.EventHandler(this.btnPIC_Click);
             // 
             // FUser
             // 
@@ -255,7 +255,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1045, 521);
+            this.ClientSize = new System.Drawing.Size(1187, 578);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel3);
@@ -277,7 +277,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnPIC;
         private Guna.UI2.WinForms.Guna2Button btnMyTree;
         private Guna.UI2.WinForms.Guna2Button btnTuVan;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
@@ -287,5 +286,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnPIC;
     }
 }

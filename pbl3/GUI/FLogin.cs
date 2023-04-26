@@ -1,4 +1,6 @@
-﻿using System;
+﻿using pbl3.BLL;
+using pbl3.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,28 +18,26 @@ namespace pbl3
         {
             InitializeComponent();
         }
-
-       
-        bool Login(string userName, string pw)
-        {
-            if (userName == "" && pw == "")
-            {
-                return false;
-            }
-            else return true;
-            
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userName = txtUsername.Text;
-            string pw = txtPassword.Text;
-            if (Login(userName, pw))
+            
+            if (Account_BLL.Instance.CheckAccount(txtUsername.Text, txtPassword.Text))
             {
-                FUser f = new FUser();
+                Account a = Account_BLL.Instance.GetAccountByUserName(txtUsername.Text);
+                if (a.Type == 0) // 0: Admin, 1: User
+                {
+                    FAdmin f = new FAdmin();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else 
+                {
+                FUser f = new FUser(txtUsername.Text);
                 this.Hide();
                 f.ShowDialog();
-                this.Show();
+                    this.Show();
+                }
             }
             else
             {
@@ -52,7 +52,6 @@ namespace pbl3
             this.Hide();
             f.ShowDialog();
             this.Show();
-            //
         }
 
         private void FLogin_FormClosing_1(object sender, FormClosingEventArgs e)

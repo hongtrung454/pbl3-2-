@@ -35,10 +35,7 @@
             this.NoShowPW2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ShowPW1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NoShowPW1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbFullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbRePassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,6 +49,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.cbbLocation = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPW2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NoShowPW2)).BeginInit();
@@ -63,14 +61,12 @@
             // 
             this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.cbbLocation);
             this.guna2Panel1.Controls.Add(this.ShowPW2);
             this.guna2Panel1.Controls.Add(this.NoShowPW2);
             this.guna2Panel1.Controls.Add(this.ShowPW1);
             this.guna2Panel1.Controls.Add(this.NoShowPW1);
-            this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.tbEmail);
-            this.guna2Panel1.Controls.Add(this.tbPhone);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.tbFullname);
             this.guna2Panel1.Controls.Add(this.tbRePassword);
@@ -137,18 +133,6 @@
             this.NoShowPW1.TabStop = false;
             this.NoShowPW1.Click += new System.EventHandler(this.NoShowPW1_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.label4.Location = new System.Drawing.Point(167, 432);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 25);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Email";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -157,56 +141,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
             this.label2.Location = new System.Drawing.Point(167, 384);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Phone number";
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEmail.DefaultText = "";
-            this.tbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbEmail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(129)))), ((int)(((byte)(107)))));
-            this.tbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tbEmail.ForeColor = System.Drawing.Color.White;
-            this.tbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmail.Location = new System.Drawing.Point(345, 424);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.PasswordChar = '\0';
-            this.tbEmail.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbEmail.PlaceholderText = "";
-            this.tbEmail.SelectedText = "";
-            this.tbEmail.Size = new System.Drawing.Size(308, 33);
-            this.tbEmail.TabIndex = 6;
-            // 
-            // tbPhone
-            // 
-            this.tbPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPhone.DefaultText = "";
-            this.tbPhone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPhone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPhone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPhone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPhone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(129)))), ((int)(((byte)(107)))));
-            this.tbPhone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPhone.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tbPhone.ForeColor = System.Drawing.Color.White;
-            this.tbPhone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPhone.Location = new System.Drawing.Point(345, 376);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.PasswordChar = '\0';
-            this.tbPhone.PlaceholderForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tbPhone.PlaceholderText = "";
-            this.tbPhone.SelectedText = "";
-            this.tbPhone.Size = new System.Drawing.Size(308, 33);
-            this.tbPhone.TabIndex = 5;
-            this.tbPhone.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
+            this.label2.Text = "Location";
             // 
             // label1
             // 
@@ -406,6 +343,22 @@
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 36);
             this.guna2ControlBox3.TabIndex = 25;
             // 
+            // cbbLocation
+            // 
+            this.cbbLocation.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLocation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLocation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(129)))), ((int)(((byte)(107)))));
+            this.cbbLocation.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbLocation.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbLocation.ForeColor = System.Drawing.Color.White;
+            this.cbbLocation.ItemHeight = 30;
+            this.cbbLocation.Location = new System.Drawing.Point(343, 373);
+            this.cbbLocation.Name = "cbbLocation";
+            this.cbbLocation.Size = new System.Drawing.Size(310, 36);
+            this.cbbLocation.TabIndex = 32;
+            // 
             // FRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,16 +398,14 @@
         private Guna.UI2.WinForms.Guna2TextBox tbFullname;
         private Guna.UI2.WinForms.Guna2TextBox tbRePassword;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2TextBox tbEmail;
-        private Guna.UI2.WinForms.Guna2TextBox tbPhone;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox ShowPW1;
         private Guna.UI2.WinForms.Guna2PictureBox NoShowPW1;
         private Guna.UI2.WinForms.Guna2PictureBox ShowPW2;
         private Guna.UI2.WinForms.Guna2PictureBox NoShowPW2;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbLocation;
     }
 }

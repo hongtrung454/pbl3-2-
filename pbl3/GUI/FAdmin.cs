@@ -29,12 +29,11 @@ namespace pbl3
             childForm.BringToFront();
             childForm.Show();
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btnManageList_Click(object sender, EventArgs e)
         {
             openChildForm(new CFManageTree());

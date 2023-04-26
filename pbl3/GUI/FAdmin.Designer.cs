@@ -144,11 +144,14 @@
             this.pictureBox1.Size = new System.Drawing.Size(47, 54);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // btnPIC
             // 
             this.btnPIC.BackColor = System.Drawing.Color.Transparent;
+            this.btnPIC.BorderColor = System.Drawing.Color.White;
             this.btnPIC.BorderRadius = 22;
+            this.btnPIC.BorderThickness = 3;
             this.btnPIC.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnPIC.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPIC.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
@@ -157,7 +160,7 @@
             this.btnPIC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPIC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnPIC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(53)))), ((int)(((byte)(46)))));
-            this.btnPIC.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPIC.Font = new System.Drawing.Font("Century Gothic", 15.75F);
             this.btnPIC.ForeColor = System.Drawing.Color.White;
             this.btnPIC.Location = new System.Drawing.Point(12, 306);
             this.btnPIC.Name = "btnPIC";
@@ -169,7 +172,9 @@
             // btnManageUser
             // 
             this.btnManageUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageUser.BorderColor = System.Drawing.Color.White;
             this.btnManageUser.BorderRadius = 22;
+            this.btnManageUser.BorderThickness = 3;
             this.btnManageUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageUser.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnManageUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -190,7 +195,13 @@
             // btnManageList
             // 
             this.btnManageList.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageList.BorderColor = System.Drawing.Color.White;
             this.btnManageList.BorderRadius = 22;
+            this.btnManageList.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnManageList.BorderThickness = 3;
+            this.btnManageList.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnManageList.CheckedState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnManageList.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnManageList.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnManageList.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnManageList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

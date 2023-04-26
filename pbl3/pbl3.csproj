@@ -70,10 +70,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs">
+    <Compile Include="BLL\Account_BLL.cs" />
+    <Compile Include="BLL\UserLocation_BLL.cs" />
+    <Compile Include="DAL\Account_DAL.cs" />
+    <Compile Include="DAL\UserLocation_DAL.cs" />
+    <Compile Include="DTO\Account.cs">
       <DependentUpon>TreeModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Care.cs">
+    <Compile Include="DTO\Care.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CBBItem.cs" />
+    <Compile Include="DTO\Planting.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Tree.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TreeDemand.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TreeLocation.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TreeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TreeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TreeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TreeModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TreeType.cs">
+      <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\UserLocation.cs">
       <DependentUpon>TreeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GUI\CFManageTree.cs">
@@ -136,44 +174,8 @@
     <Compile Include="GUI\FRegister.Designer.cs">
       <DependentUpon>FRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Planting.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tree.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TreeDemand.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TreeLocation.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TreeModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TreeModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TreeModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TreeModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TreeModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="TreeType.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserLocation.cs">
-      <DependentUpon>TreeModel.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="GUI\CFManageTree.resx">
       <DependentUpon>CFManageTree.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +215,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="DTO\TreeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TreeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO\TreeModel.edmx.diagram">
+      <DependentUpon>TreeModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -223,35 +232,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="TreeModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TreeModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="TreeModel.edmx.diagram">
-      <DependentUpon>TreeModel.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TreeModel.Context.tt">
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DTO\TreeModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TreeModel.Context.cs</LastGenOutput>
       <DependentUpon>TreeModel.edmx</DependentUpon>
+      <LastGenOutput>TreeModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TreeModel.tt">
+    <Content Include="DTO\TreeModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>TreeModel.edmx</DependentUpon>
       <LastGenOutput>TreeModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using pbl3.BLL;
+using pbl3.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +17,17 @@ namespace pbl3
         public FRegister()
         {
             InitializeComponent();
+            GetCBB();
         }
+
+        public void GetCBB()
+        {
+            foreach (CBBItem a in UserLocation_BLL.Instance.GetCBBItems())
+            {
+                cbbLocation.Items.Add(a);
+            }
+        }
+
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -24,19 +36,9 @@ namespace pbl3
 
        
 
-        private void btExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btRegistration_Click_1(object sender, EventArgs e)
         {
-            if (tbFullname.Text == "" || tbUsername.Text == "" || tbPassword.Text == "" || tbEmail.Text == "" || tbPhone.Text == "" || tbRePassword.Text == "")
+            if (tbFullname.Text == "" || tbUsername.Text == "" || tbPassword.Text == "" || tbRePassword.Text == "" || cbbLocation.Text == "")
             {
                 MessageBox.Show(" Nhập đầy đủ thông tin cần thiết để đăng ký!");
             }
@@ -48,8 +50,20 @@ namespace pbl3
                 }
                 else
                 {
-                    MessageBox.Show("Đăng ký tài khoản thành công!");
-                    this.Dispose();
+                    Account a = Account_BLL.Instance.GetAccountByUserName(tbUsername.Text);
+                    if (a == null)
+                    {
+                        Account acc = new Account();
+                        acc.UserName = tbUsername.Text;
+                        acc.Password = tbPassword.Text;
+                        acc.DisplayName = tbFullname.Text;
+                        acc.Type = 1;
+                        acc.UserLocationID = ((CBBItem)cbbLocation.SelectedItem).Value;
+                        Account_BLL.Instance.AddAccount(acc);
+                        this.Dispose();
+                    }
+                    else 
+                        MessageBox.Show("Username da ton tai");
                 }
             }
         }
@@ -64,6 +78,7 @@ namespace pbl3
                 tbRePassword.PasswordChar = '*';
             }
         }
+
 
         private void ShowPW1_Click(object sender, EventArgs e)
         {
