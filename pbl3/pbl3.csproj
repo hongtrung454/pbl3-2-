@@ -71,8 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Account_BLL.cs" />
+    <Compile Include="BLL\Tree_BLL.cs" />
     <Compile Include="BLL\UserLocation_BLL.cs" />
     <Compile Include="DAL\Account_DAL.cs" />
+    <Compile Include="DAL\Tree_DAL.cs" />
     <Compile Include="DAL\UserLocation_DAL.cs" />
     <Compile Include="DTO\Account.cs">
       <DependentUpon>TreeModel.tt</DependentUpon>
@@ -108,11 +110,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TreeModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DTO\TreeShort_DTO.cs" />
     <Compile Include="DTO\TreeType.cs">
       <DependentUpon>TreeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\UserLocation.cs">
       <DependentUpon>TreeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddTree.Designer.cs">
+      <DependentUpon>AddTree.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\CFManageTree.cs">
       <SubType>Form</SubType>
@@ -174,8 +183,17 @@
     <Compile Include="GUI\FRegister.Designer.cs">
       <DependentUpon>FRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TreeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TreeDetail.Designer.cs">
+      <DependentUpon>TreeDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddTree.resx">
+      <DependentUpon>AddTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\CFManageTree.resx">
       <DependentUpon>CFManageTree.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FRegister.resx">
       <DependentUpon>FRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TreeDetail.resx">
+      <DependentUpon>TreeDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

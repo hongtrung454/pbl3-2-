@@ -23,22 +23,22 @@ namespace pbl3.BLL
             }
 
         }
-        public Account GetAccountByUserName(String User)
+        public Account GetAccountByUserName(String Username)
         {
             foreach (Account a in Account_DAL.Instance.GetAccounts())
             {
-                if (User == a.UserName)
+                if (Username == a.UserName)
                 {
                     return a;
                 }
             }
             return null;
         }
-        public bool CheckAccount(String User, String Pass)
+        public bool CheckAccount(String Username, String Pass)
         {
             foreach (Account a in Account_DAL.Instance.GetAccounts())
             {
-                if (User == a.UserName && Pass == a.Password)
+                if (Username == a.UserName && Pass == a.Password)
                 {
                     return true;
                 }

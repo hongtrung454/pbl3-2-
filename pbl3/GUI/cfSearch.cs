@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pbl3.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,8 @@ namespace pbl3
         public cfSearch()
         {
             InitializeComponent();
+            guna2DataGridView1.DataSource = Tree_BLL.Instance.GetTrees();
+
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
